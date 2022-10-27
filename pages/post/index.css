@@ -1,1 +1,133 @@
 /* Desenvolva seu estilo aqui */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 181px;
+}
+.header__div__align {
+    width: 128px;
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--font-size-2);
+    gap: 16px;
+}
+header > button {
+    width: 90px;
+    height: 38px;
+    font-weight: 600;
+    color: #495057;
+    border: none;
+    border-radius: 32px;
+}
+header > button:hover {
+    background-color: var(--color-brand-200);
+    color: white;
+    cursor: pointer;
+    transition: ease-in 0.2s;
+}
+main {
+    padding: 53px 181px 87px 181px;
+}
+.section__h1__align {
+    background-color: var(--color-grey-700);
+    width: 100vw;
+    height: 336px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section__h1__align h1 {
+    width: 840px;
+    height: 120px;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 150%;
+}
+.section__h1__align > div {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: flex-start;
+    width: 80%;
+}
+.section__h1__align p {
+    color: var(--color-grey-200);
+}
+main > section > img {
+    width: 1475px;
+    height: 402px;
+    padding-bottom: 52px;
+}
+main > section > p {
+    width: 1532px;
+    height: 220px;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--color-grey-200);
+}
+nav {
+    width: 1532px;
+    height: 93px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 46px;
+    flex-wrap: nowrap;
+    overflow-y: auto;
+}
+nav > button {
+    width: 100px;
+    height: 38px;
+    text-align: center;
+    border-radius: 32px;
+    border: none;
+    font-weight: 600;
+    background: var(--color-grey-600);
+}
+nav > button:hover {
+    color: white;
+    background-color: var(--color-brand-100);
+    cursor: pointer;
+}
+
+footer {
+    height: 225px;
+    background-color: var(--color-grey-100);
+}
+.div__footer {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    padding: 92px 196px 0px 186px;
+}
+.div__img__footer {
+    width: 128px;
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--font-size-2);
+    gap: 16px;
+}
+footer div > p {
+    color: var(--color-grey-300);
+    width: 551px;
+    height: 72px;
+}
+footer h2 {
+    color: white;
+}
+footer button {
+    border-radius: 32px;
+    border: none;
+    color: white;
+    background: var(--color-grey-200);
+    width: 182px;
+    height: 38px;
+}
+
+footer button:hover {
+    cursor: pointer;
+    background-color: var(--color-brand-100);
+    transition: 0.3s ease-in-out;
+}
