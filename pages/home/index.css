@@ -61,6 +61,7 @@ nav > button:hover {
 }
 main {
     padding: 0px 196px 88px 176px;
+    height: 5000px;
 }
 ul {
     display: flex;
@@ -77,6 +78,16 @@ li {
     justify-content: space-between;
     background-color: var(--color-brand-600);
     align-items: flex-start;
+    gap: 25px;
+    margin: 27px 0px;
+}
+li > figure {
+    width: 548px;
+    height: 250px;
+}
+li > figure > img {
+    width:  100%;
+    height: 100%;
 }
 li > h3 {
     font-size: var(--font-size-3);
@@ -120,4 +131,8 @@ footer button:hover {
     cursor: pointer;
     background-color: var(--color-brand-100);
     transition: 0.3s ease-in-out;
+}
+.observer {
+    position: absolute;
+    bottom: 0;
 }

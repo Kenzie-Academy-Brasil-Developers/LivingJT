@@ -54,7 +54,8 @@ main {
     color: var(--color-grey-200);
 }
 main > section > img {
-    width: 1475px;
+    margin-left: 7%;
+    width: 70%;
     height: 402px;
     padding-bottom: 52px;
 }
