@@ -1,31 +1,33 @@
-import { getPostsPerPage } from "../../requisition.js";
+import { btnClicked, renderButtonsHome } from "../../scripts/buttons.js";
+import { renderCards } from "../../scripts/cards.js";
+import { saveCategories } from "../../scripts/categories.js";
+import { setInitialCategoryLocalStorage } from "../../scripts/localStorage.js";
+import { getNews } from "../../scripts/requests.js";
 
-export async function renderNewPosts() {
-    const dados = await getPostsPerPage()
-    
-    const ul = document.querySelector('.ul')
-    ul.innerHTML = ''
+await saveCategories()
 
-     const data = dados.news
-     
-     data.forEach((element)=>{
-        
-        ul.insertAdjacentHTML('afterbegin', `
-        <li>
-        <figure>
-            <img src="${element.image}" alt="">
-        </figure>
-        <h3>${element.title}</h3>
-        <p>${element.description}</p>
-        <a id="${element.id}">Acessar conteúdo</a>
-        </li>
-        `)
-            const acessBtn = document.getElementById(`${element.id}`)
-                acessBtn.addEventListener('click', async (evt)=> {
-                    evt.preventDefault()           
-                    localStorage.setItem('pageInfo', JSON.stringify(element)|| [])    
-                    window.location.replace('/pages/post/post.html')                
-                })        
-    })
-}
-renderNewPosts()
+setInitialCategoryLocalStorage()
+
+renderButtonsHome("btns-wrapper")
+
+let page = 0
+
+await renderCards(localStorage.getItem("categoryNow"), page)
+page++
+
+const observerDiv = document.querySelector(".observer")
+
+const observer = new IntersectionObserver(async (entries) => {  
+  if (entries.some((entry) => entry.isIntersecting)){
+    const news = await getNews(page)
+
+    if (news.length > 0){
+      renderCards(localStorage.getItem("categoryNow"), page)
+      page++
+    }
+  }
+})
+
+observer.observe(observerDiv)
+
+btnClicked()

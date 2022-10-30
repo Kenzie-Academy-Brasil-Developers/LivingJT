@@ -118,16 +118,19 @@ footer div > p {
 footer h2 {
     color: white;
 }
-footer button {
+footer a {
     border-radius: 32px;
     border: none;
     color: white;
     background: var(--color-grey-200);
     width: 182px;
     height: 38px;
+    text-align: center;
+    padding-top: 8px;
+    text-decoration: none;
 }
 
-footer button:hover {
+footer a:hover {
     cursor: pointer;
     background-color: var(--color-brand-100);
     transition: 0.3s ease-in-out;

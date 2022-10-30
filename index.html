@@ -15,11 +15,11 @@
 </head>
 
 <body>
-    <header>
+    <header  id="header">
         <div>
             <figure>
                 <img src="/pages/src/home/Rectangle 4.svg" alt="">
-                <h3 id="top">Living</h3>
+                <h3>Living</h3>
             </figure>
             <div class="header__div__title">
                 <h1>Cuidando de cada <span>detalhe</span> da sua casa</h1>
@@ -32,25 +32,25 @@
         </figure>
     </header>
     <main>
-        <nav>
-            <button>Todos</button>
-            <button>Pintura</button>
-            <button>Decoração</button>
-            <button>Organização</button>
-            <button>Limpeza</button>
-            <button>Segurança</button>
-            <button>Reforma</button>
-            <button>Aromas</button>
+        <nav class="btns-wrapper">
+            <button class="btn-category">Todos</button>
+            <button class="btn-category">Pintura</button>
+            <button class="btn-category">Decoração</button>
+            <button class="btn-category">Organização</button>
+            <button class="btn-category">Limpeza</button>
+            <button class="btn-category">Segurança</button>
+            <button class="btn-category">Reforma</button>
+            <button class="btn-category">Aromas</button>
         </nav>
-        <ul class="ul">
-            <li>
+        <ul class="ul cards-wrapper">
+            <!-- <li>
                 <figure>
                     <img src="/pages/src/home/Rectangle 1.svg" alt="">
                 </figure>
                 <h3>Cuidados para manter com plantas dentro de apartamentos</h3>
                 <p>Invite as many collaborators as you'd like. They can register as team members or join as guests - no
                     registration required.</p>
-                <a href="top">Acessar conteúdo</a>
+                <a>Acessar conteúdo</a>
             </li>
             <li>
                 <figure>
@@ -59,7 +59,7 @@
                 <h3>Cuidados para manter com plantas dentro de apartamentos</h3>
                 <p>Invite as many collaborators as you'd like. They can register as team members or join as guests - no
                     registration required.</p>
-                <a href="top">Acessar conteúdo</a>
+                <a>Acessar conteúdo</a>
             </li>
             <li>
                 <figure>
@@ -68,11 +68,11 @@
                 <h3>Cuidados para manter com plantas dentro de apartamentos</h3>
                 <p>Invite as many collaborators as you'd like. They can register as team members or join as guests - no
                     registration required.</p>
-                <a href="top">Acessar conteúdo</a>
-            </li>
+                <a>Acessar conteúdo</a>
+            </li> -->
         </ul>
-        <div class="observer"></div>
     </main>
+    <div class="observer"></div>
     <footer>
         <div class="div__footer">
             <div class="div__img__footer">
@@ -84,12 +84,10 @@
                     dry-transfer
                     sheets, and again during the 90s as desktop publishers bundled the text with their software.</p>
             </div>
-            <button href="#top">Voltar para o topo</button>
+            <a href="#header">Voltar para o topo</a>
         </div>
     </footer>
-    <script type="module" src="/requisition.js"></script>
     <script type="module" src="/pages/home/index.js"></script>
-    <script type="module" src="/scripts/observerScroll.js"></script>
 </body>
 
 </html>
